@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0.1" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#b8405a"/>
+      <stop offset="0.5" stop-color="#7d2135"/>
+      <stop offset="1" stop-color="#3f0f1c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#ff9fb2" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ff9fb2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ground" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#1a0509" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1a0509" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e4d8d4"/>
+    </linearGradient>
+    <linearGradient id="lidPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efe7e4"/>
+      <stop offset="1" stop-color="#fbf8f7"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e9e0dd"/>
+    </linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="rice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#eedcc0"/>
+    </linearGradient>
+    <linearGradient id="bed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f5a1a"/>
+      <stop offset="1" stop-color="#2e4512"/>
+    </linearGradient>
+    <radialGradient id="floret" cx="0.38" cy="0.32" r="0.7">
+      <stop offset="0" stop-color="#b6d46a"/>
+      <stop offset="0.6" stop-color="#6f9a2c"/>
+      <stop offset="1" stop-color="#4a6d1c"/>
+    </radialGradient>
+    <linearGradient id="salmon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffab7a"/>
+      <stop offset="1" stop-color="#e2602e"/>
+    </linearGradient>
+    <linearGradient id="leafA" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f6e17"/>
+      <stop offset="1" stop-color="#b8d867"/>
+    </linearGradient>
+    <linearGradient id="leafB" x1="1" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#5a7a1d"/>
+      <stop offset="1" stop-color="#a9cc58"/>
+    </linearGradient>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="18"/>
+      <feOffset dy="18"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tiny" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+    <clipPath id="opening"><rect x="226" y="428" width="572" height="240" rx="88"/></clipPath>
+    <clipPath id="frontClip"><path d="M196 548 L220 748 Q228 796 288 796 L736 796 Q796 796 804 748 L828 548 Z"/></clipPath>
+  </defs>
+
+  <!-- fondo -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+
+  <g transform="translate(512 512) scale(0.9) translate(-512 -505)">
+  <!-- sombra en el suelo -->
+  <ellipse cx="512" cy="842" rx="330" ry="46" fill="url(#ground)"/>
+
+  <!-- tapa apoyada detrás -->
+  <g transform="rotate(-6 512 330)" filter="url(#drop)">
+    <rect x="246" y="196" width="532" height="262" rx="76" fill="url(#lid)"/>
+    <rect x="286" y="232" width="452" height="190" rx="54" fill="url(#lidPanel)"/>
+    <rect x="300" y="214" width="424" height="10" rx="5" fill="#ffffff"/>
+  </g>
+
+  <g filter="url(#drop)">
+    <!-- cara frontal de cristal -->
+    <path d="M196 548 L220 748 Q228 796 288 796 L736 796 Q796 796 804 748 L828 548 Z" fill="#7d2a3c" fill-opacity="0.35"/>
+    <g clip-path="url(#frontClip)">
+      <rect x="180" y="690" width="330" height="120" fill="#ead2ae"/>
+      <rect x="516" y="690" width="330" height="48" fill="#557a22"/>
+      <rect x="516" y="738" width="330" height="72" fill="#ee8250"/>
+      <rect x="180" y="540" width="680" height="300" fill="url(#front)"/>
+      <rect x="504" y="690" width="12" height="140" fill="#ffffff" fill-opacity="0.75"/>
+    </g>
+    <path d="M196 548 L220 748 Q228 796 288 796 L736 796 Q796 796 804 748 L828 548" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M238 708 L246 760" stroke="#ffffff" stroke-opacity="0.9" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- borde superior -->
+    <rect x="196" y="404" width="632" height="288" rx="112" fill="url(#rim)"/>
+
+    <!-- comida vista desde arriba -->
+    <g clip-path="url(#opening)">
+      <rect x="226" y="428" width="572" height="240" fill="url(#rice)"/>
+      <g fill="#ffffff">
+        <ellipse cx="290" cy="480" rx="13" ry="6" transform="rotate(-25 290 480)"/>
+        <ellipse cx="340" cy="462" rx="13" ry="6" transform="rotate(20 340 462)"/>
+        <ellipse cx="400" cy="486" rx="13" ry="6" transform="rotate(-40 400 486)"/>
+        <ellipse cx="460" cy="466" rx="13" ry="6" transform="rotate(10 460 466)"/>
+        <ellipse cx="270" cy="545" rx="13" ry="6" transform="rotate(35 270 545)"/>
+        <ellipse cx="330" cy="525" rx="13" ry="6" transform="rotate(-15 330 525)"/>
+        <ellipse cx="385" cy="560" rx="13" ry="6" transform="rotate(25 385 560)"/>
+        <ellipse cx="445" cy="535" rx="13" ry="6" transform="rotate(-30 445 535)"/>
+        <ellipse cx="300" cy="610" rx="13" ry="6" transform="rotate(5 300 610)"/>
+        <ellipse cx="360" cy="630" rx="13" ry="6" transform="rotate(-35 360 630)"/>
+        <ellipse cx="420" cy="610" rx="13" ry="6" transform="rotate(30 420 610)"/>
+        <ellipse cx="470" cy="600" rx="13" ry="6" transform="rotate(-10 470 600)"/>
+        <ellipse cx="460" cy="648" rx="13" ry="6" transform="rotate(15 460 648)"/>
+      </g>
+      <g fill="#d8c2a0">
+        <ellipse cx="312" cy="500" rx="11" ry="5" transform="rotate(40 312 500)"/>
+        <ellipse cx="426" cy="510" rx="11" ry="5" transform="rotate(-20 426 510)"/>
+        <ellipse cx="350" cy="590" rx="11" ry="5" transform="rotate(10 350 590)"/>
+        <ellipse cx="440" cy="575" rx="11" ry="5" transform="rotate(45 440 575)"/>
+        <ellipse cx="280" cy="640" rx="11" ry="5" transform="rotate(-30 280 640)"/>
+      </g>
+
+      <!-- brócoli -->
+      <rect x="512" y="428" width="300" height="118" fill="url(#bed)"/>
+      <g filter="url(#tiny)">
+        <circle cx="570" cy="486" r="40" fill="#46691a"/>
+        <circle cx="552" cy="472" r="20" fill="url(#floret)"/>
+        <circle cx="586" cy="470" r="20" fill="url(#floret)"/>
+        <circle cx="550" cy="498" r="18" fill="url(#floret)"/>
+        <circle cx="588" cy="500" r="18" fill="url(#floret)"/>
+        <circle cx="570" cy="484" r="22" fill="url(#floret)"/>
+        <circle cx="570" cy="506" r="16" fill="url(#floret)"/>
+        <circle cx="648" cy="470" r="44" fill="#46691a"/>
+        <circle cx="628" cy="455" r="22" fill="url(#floret)"/>
+        <circle cx="666" cy="452" r="22" fill="url(#floret)"/>
+        <circle cx="626" cy="483" r="20" fill="url(#floret)"/>
+        <circle cx="668" cy="485" r="20" fill="url(#floret)"/>
+        <circle cx="648" cy="468" r="24" fill="url(#floret)"/>
+        <circle cx="648" cy="492" r="18" fill="url(#floret)"/>
+        <circle cx="728" cy="490" r="40" fill="#46691a"/>
+        <circle cx="710" cy="476" r="20" fill="url(#floret)"/>
+        <circle cx="744" cy="474" r="20" fill="url(#floret)"/>
+        <circle cx="708" cy="502" r="18" fill="url(#floret)"/>
+        <circle cx="746" cy="504" r="18" fill="url(#floret)"/>
+        <circle cx="728" cy="488" r="22" fill="url(#floret)"/>
+        <circle cx="728" cy="510" r="16" fill="url(#floret)"/>
+        <circle cx="608" cy="528" r="34" fill="#46691a"/>
+        <circle cx="593" cy="516" r="17" fill="url(#floret)"/>
+        <circle cx="622" cy="514" r="17" fill="url(#floret)"/>
+        <circle cx="591" cy="538" r="15" fill="url(#floret)"/>
+        <circle cx="623" cy="540" r="15" fill="url(#floret)"/>
+        <circle cx="608" cy="526" r="19" fill="url(#floret)"/>
+        <circle cx="608" cy="545" r="14" fill="url(#floret)"/>
+        <circle cx="690" cy="530" r="34" fill="#46691a"/>
+        <circle cx="675" cy="518" r="17" fill="url(#floret)"/>
+        <circle cx="704" cy="516" r="17" fill="url(#floret)"/>
+        <circle cx="673" cy="540" r="15" fill="url(#floret)"/>
+        <circle cx="705" cy="542" r="15" fill="url(#floret)"/>
+        <circle cx="690" cy="528" r="19" fill="url(#floret)"/>
+        <circle cx="690" cy="547" r="14" fill="url(#floret)"/>
+        <circle cx="770" cy="530" r="30" fill="#46691a"/>
+        <circle cx="756" cy="520" r="15" fill="url(#floret)"/>
+        <circle cx="782" cy="518" r="15" fill="url(#floret)"/>
+        <circle cx="755" cy="539" r="14" fill="url(#floret)"/>
+        <circle cx="784" cy="540" r="14" fill="url(#floret)"/>
+        <circle cx="770" cy="528" r="16" fill="url(#floret)"/>
+        <circle cx="770" cy="545" r="12" fill="url(#floret)"/>
+        </g>
+      <!-- salmón -->
+      <rect x="512" y="552" width="300" height="120" fill="#f6e3d6"/>
+      <g filter="url(#tiny)">
+        <rect x="532" y="566" width="122" height="88" rx="22" fill="url(#salmon)"/>
+        <rect x="664" y="572" width="120" height="84" rx="22" fill="url(#salmon)"/>
+      </g>
+      <g stroke="#ffe3d2" stroke-opacity="0.85" stroke-width="6" stroke-linecap="round" fill="none">
+        <path d="M552 590 Q 572 612 560 640"/><path d="M584 584 Q 604 608 592 644"/><path d="M616 584 Q 636 608 626 644"/>
+        <path d="M686 592 Q 706 614 694 642"/><path d="M718 588 Q 738 612 726 646"/><path d="M750 590 Q 768 612 758 640"/>
+      </g>
+
+      <!-- separadores -->
+      <rect x="500" y="420" width="16" height="260" fill="#ffffff"/>
+      <rect x="508" y="540" width="300" height="14" fill="#ffffff"/>
+      <rect x="500" y="420" width="16" height="260" fill="#000000" fill-opacity="0.04"/>
+      <!-- sombra interior del borde -->
+      <rect x="226" y="428" width="572" height="240" rx="88" fill="none" stroke="#5a2a20" stroke-opacity="0.18" stroke-width="18"/>
+    </g>
+    <rect x="226" y="428" width="572" height="240" rx="88" fill="none" stroke="#ffffff" stroke-opacity="0.9" stroke-width="3"/>
+    <path d="M286 414 L 520 414" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- hojas -->
+    <g filter="url(#tiny)">
+      <path d="M760 470 C 742 386, 790 316, 878 300 C 892 388, 846 452, 760 470 Z" fill="url(#leafA)"/>
+      <path d="M770 462 C 796 410, 828 362, 868 318" stroke="#eef6d2" stroke-opacity="0.8" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M752 474 C 712 422, 650 404, 606 418 C 632 470, 692 494, 752 474 Z" fill="url(#leafB)"/>
+      <path d="M744 470 C 708 448, 670 432, 620 422" stroke="#eef6d2" stroke-opacity="0.75" stroke-width="5" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+  </g>
+</svg>

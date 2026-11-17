@@ -1,7 +1,7 @@
 /* Tuppers del mes · funciona sin conexión.
    La página se pide primero a la red (así llegan los cambios) y, sin conexión, sale de la copia.
    Iconos y tipografías salen de la copia. La sincronización (Supabase) nunca pasa por aquí. */
-const VERSION = 'tuppers-v1';
+const VERSION = 'tuppers-v2';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
