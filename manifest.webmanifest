@@ -1,0 +1,22 @@
+{
+  "name": "Tuppers del mes",
+  "short_name": "Tuppers",
+  "description": "Las cenas del mes, la compra y el congelador, día a día.",
+  "lang": "es",
+  "id": "./",
+  "start_url": "./#hoy",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f1ee",
+  "theme_color": "#fcfbf9",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Compra", "url": "./#compra", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Congelador", "url": "./#frio", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
